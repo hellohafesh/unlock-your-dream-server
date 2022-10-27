@@ -13,9 +13,13 @@ app.get('/', (req, res) => {
     res.send('Running')
 })
 
+
+
 app.get('/courses', (req, res) => {
     res.send(courses);
 })
+
+
 
 app.get('/coursesDetails/:id', (req, res) => {
 
@@ -23,6 +27,8 @@ app.get('/coursesDetails/:id', (req, res) => {
     const yourCourse = coursesDetails.find(details => details.id === id);
     res.send(yourCourse);
 })
+
+
 
 app.listen(port, () => {
     console.log(`Our Server ${port}`)
